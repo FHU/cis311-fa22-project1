@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 :root {
   --primary-color: #047aed;
@@ -60,9 +60,8 @@ pre {
 /* Showcase  */
 
 .showcase {
-  height: 500px;
+  height: 550px;
   position: relative;
-  
 }
 
 .showcase-text {
@@ -109,6 +108,61 @@ pre {
   z-index: -1;
 }
 
+@media (max-width: 868px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .showcase {
+    height: auto;
+  }
+
+  .xl {
+    font-size:3.5rem;
+  }
+
+  .showcase-text {
+    text-align: center;
+    animation: slideInFromTop 1s ease-in;
+  }
+
+  .showcase-form {
+    justify-self: center;
+    margin: auto;
+    animation: slideInFromBottom 1s ease-in;
+  }
+
+
+}
+
+/* Stats */
+.stats {
+  padding-top: 150px;
+}
+
+
+.languages .container {
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.languages .card {
+  transition: all 0.2s ease-in;
+}
+
+.languages .card:hover {
+  transform: translateY(-15px);
+}
+
+.languages .card img {
+  max-width: 60px;
+}
+
+.languages h4 {
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 
 /* Animations */
 @keyframes slideInFromLeft {
@@ -131,8 +185,4 @@ pre {
   }
 }
 
-/* Stats */
-.stats {
-  padding-top: 150px;
-}
 
